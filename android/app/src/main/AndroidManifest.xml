@@ -23,6 +23,26 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- Enable Deeplinking -->
+            <intent-filter android:label="@string/filter_view_http_rnndeeplink">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.rnn.com/deeplink” -->
+                <data android:scheme="http"
+                    android:host="www.rnn.com"
+                    android:pathPrefix="/deeplink" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+            </intent-filter>
+            <!-- Enable Deeplinking -->
+            <intent-filter android:label="@string/filter_view_rnn_deeplink">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "rnn://deeplink” -->
+                <data android:scheme="rnn"
+                    android:host="deeplink" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -9,6 +9,7 @@ import {
   View,
   Button,
   NativeModules,
+  Linking,
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 
@@ -17,6 +18,15 @@ const { MyNativeModule } = NativeModules;
 class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.handleDeeplink();
+  }
+
+  async handleDeeplink() {
+    const deeplinkURL = await Linking.getInitialURL();
+    alert(deeplinkURL);
   }
 
   render() {

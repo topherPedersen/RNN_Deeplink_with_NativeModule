@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RNN_Deeplink_with_NativeModule</string>
+    <string name="filter_view_http_rnndeeplink">filter_view_http_rnndeeplink</string>
+    <string name="filter_view_rnn_deeplink">filter_view_rnn_deeplink</string>
 </resources>
