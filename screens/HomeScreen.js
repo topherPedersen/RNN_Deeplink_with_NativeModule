@@ -8,8 +8,11 @@ import {
   useColorScheme,
   View,
   Button,
+  NativeModules,
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+
+const { MyNativeModule } = NativeModules;
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -24,6 +27,10 @@ class HomeScreen extends React.Component {
           title='GOTO FOO'
           color='purple'
           onPress={() => Navigation.push(this.props.componentId, {component: {name: 'Foo'}})} />
+        <Button 
+          title='LAUNCH NATIVE ACTIVITY'
+          color='purple'
+          onPress={() => MyNativeModule.sayHello() } />
       </SafeAreaView>
     );
   }
