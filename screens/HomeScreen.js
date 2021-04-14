@@ -30,7 +30,7 @@ class HomeScreen extends React.Component {
         <Button 
           title='LAUNCH NATIVE ACTIVITY'
           color='purple'
-          onPress={() => MyNativeModule.sayHello() } />
+          onPress={() => MyNativeModule.launchNativeActivity() } />
       </SafeAreaView>
     );
   }

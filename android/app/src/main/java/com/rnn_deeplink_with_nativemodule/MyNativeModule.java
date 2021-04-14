@@ -1,5 +1,7 @@
 package com.rnn_deeplink_with_nativemodule;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 
 import com.facebook.react.bridge.NativeModule;
@@ -23,5 +25,12 @@ public class MyNativeModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void sayHello() {
         Log.i("nativemodules", "hello, world");
+    }
+
+    @ReactMethod
+    public void launchNativeActivity() {
+        Intent intent = new Intent(getReactApplicationContext(), MyNativeActivity.class);
+        Activity currentActivity = getCurrentActivity();
+        currentActivity.startActivity(intent);
     }
 }
