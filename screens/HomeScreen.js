@@ -26,7 +26,9 @@ class HomeScreen extends React.Component {
 
   async handleDeeplink() {
     const deeplinkURL = await Linking.getInitialURL();
-    alert(deeplinkURL);
+    if (deeplinkURL == 'http://www.rnn.com/deeplink') {
+      Navigation.push(this.props.componentId, {component: {name: 'Foo'}})
+    }
   }
 
   render() {
