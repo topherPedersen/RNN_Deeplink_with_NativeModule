@@ -23,16 +23,4 @@ class HomeScreen extends React.Component {
   }
 }
 
-HomeScreen.options = {
-  topBar: {
-    title: {
-      text: 'RNN Deeplink with NativeModule',
-      color: 'white'
-    },
-    background: {
-      color: '#4d089a'
-    }
-  }
-}
-
 export default HomeScreen;
