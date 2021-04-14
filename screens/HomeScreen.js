@@ -17,10 +17,21 @@ class HomeScreen extends React.Component {
   render() {
     return(
       <SafeAreaView style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{textAlign: 'center'}}>RNN Deeplink with NativeModule</Text>
         <Text style={{textAlign: 'center', fontSize: 36}}>HomeScreen</Text>
       </SafeAreaView>
     );
+  }
+}
+
+HomeScreen.options = {
+  topBar: {
+    title: {
+      text: 'RNN Deeplink with NativeModule',
+      color: 'white'
+    },
+    background: {
+      color: '#4d089a'
+    }
   }
 }
 
