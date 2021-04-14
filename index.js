@@ -2,22 +2,23 @@
  * @format
  */
 
-import { Navigation } from "react-native-navigation";
-import App from "./App";
-Navigation.registerComponent('com.rnn_deeplink_with_nativemodule.WelcomeScreen', () => App);
-Navigation.events().registerAppLaunchedListener(() => {
-   Navigation.setRoot({
-     root: {
-       stack: {
-         children: [
-           {
-             component: {
-               name: 'com.rnn_deeplink_with_nativemodule.WelcomeScreen'
-             }
-           }
-         ]
-       }
-     }
-  });
-});
+import HomeScreen from './screens/HomeScreen';
 
+import { Navigation } from "react-native-navigation";
+
+Navigation.registerComponent('Home', () => HomeScreen);
+Navigation.events().registerAppLaunchedListener(async () => {
+    Navigation.setRoot({
+      root: {
+        stack: {
+          children: [
+            {
+              component: {
+                name: 'Home'
+              }
+            }
+          ]
+        }
+      }
+    });
+  });

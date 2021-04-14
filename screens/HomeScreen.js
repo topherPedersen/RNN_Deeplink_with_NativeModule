@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 
-class App extends React.Component {
+class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,9 +18,10 @@ class App extends React.Component {
     return(
       <SafeAreaView style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={{textAlign: 'center'}}>RNN Deeplink with NativeModule</Text>
+        <Text style={{textAlign: 'center', fontSize: 36}}>HomeScreen</Text>
       </SafeAreaView>
     );
   }
 }
 
-export default App;
+export default HomeScreen;
